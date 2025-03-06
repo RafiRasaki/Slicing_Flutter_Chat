@@ -85,7 +85,8 @@ class _SplashScreenState extends State<SplashScreen> {
                     'Indonesia',
                     style: TextStyle(
                       fontSize: 20,
-                      color: white
+                      color: white,
+                      letterSpacing: 2
                     ),
                   ),
                 ],

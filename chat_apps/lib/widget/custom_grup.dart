@@ -1,3 +1,4 @@
+import 'package:chat_apps/pages/room_chat.dart';
 import 'package:flutter/material.dart';
 
 import '../shared/themes.dart';
@@ -20,40 +21,47 @@ class CustomGrup extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 315,
-      height: 55,
-      child: Row(
-        children: [
-          Container(
-            width: 55,
-            height: 55,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
-                image: DecorationImage(
-                  image: AssetImage(imggrup),
-                )),
-          ),
-          const SizedBox(width: 14),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                namegrup,
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-              ),
-              Text(
-                captiongrup,
-                style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400),
-              ),
-            ],
-          ),
-          const SizedBox(width: 18),
-          Text(
-            timegrup,
-            style: TextStyle(fontSize: 13, color: grey),
-          ),
-        ],
+    return GestureDetector(
+      onTap: (){
+        Navigator.push(
+          context, MaterialPageRoute(builder: (context) => RoomChatPage())
+        );
+      },
+      child: Container(
+        width: 315,
+        height: 55,
+        child: Row(
+          children: [
+            Container(
+              width: 55,
+              height: 55,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  image: DecorationImage(
+                    image: AssetImage(imggrup),
+                  )),
+            ),
+            const SizedBox(width: 14),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  namegrup,
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                ),
+                Text(
+                  captiongrup,
+                  style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400),
+                ),
+              ],
+            ),
+            const SizedBox(width: 18),
+            Text(
+              timegrup,
+              style: TextStyle(fontSize: 13, color: grey),
+            ),
+          ],
+        ),
       ),
     );
   }

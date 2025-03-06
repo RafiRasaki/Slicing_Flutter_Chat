@@ -1,3 +1,4 @@
+import 'package:chat_apps/pages/settings_profile.dart';
 import 'package:chat_apps/shared/themes.dart';
 import 'package:chat_apps/widget/custom_grup.dart';
 import 'package:chat_apps/widget/custom_user.dart';
@@ -38,7 +39,10 @@ class _HomePageState extends State<HomePage> {
 
                     IconButton(
                       onPressed: (){
-                        print('Button Setting Success');
+                        Navigator.push(
+                          context, MaterialPageRoute(
+                            builder: (context) => SettingsProfile())
+                        );
                       }, 
                       icon: Icon(
                         Icons.settings,
