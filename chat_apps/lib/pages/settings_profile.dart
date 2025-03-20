@@ -1,4 +1,5 @@
 import 'package:chat_apps/shared/themes.dart';
+import 'package:chat_apps/widget/custom_settings.dart';
 import 'package:flutter/material.dart';
 
 class SettingsProfile extends StatefulWidget {
@@ -93,6 +94,43 @@ class _SettingsProfileState extends State<SettingsProfile> {
                 ),
               ],
             ),
+          ),
+          const SizedBox(height: 8,),
+
+          const CustomSettings(
+            iconset: Icon(Icons.key_outlined), 
+            caption: 'Account', 
+            description: 'Security Notification, Change Number'
+          ),
+
+          const CustomSettings(
+            iconset: Icon(Icons.lock_outline),
+            caption: 'Privacy',
+            description: 'Block contacts, disappearing messages'
+          ),
+
+          const CustomSettings(
+            iconset: Icon(Icons.chat_outlined),
+            caption: 'Chats',
+            description: 'Theme, wallpapers, chat history'
+          ),
+
+          const CustomSettings(
+            iconset: Icon(Icons.notifications_outlined),
+            caption: 'Notifications',
+            description: 'Message, group & call tones'
+          ),
+
+          const CustomSettings(
+            iconset: Icon(Icons.language_outlined),
+            caption: 'App language',
+            description: 'English'
+          ),
+
+          const CustomSettings(
+            iconset: Icon(Icons.help_outline),
+            caption: 'Help',
+            description: 'Help Center, contact us, privacy policy'
           ),
         ],
       ),
